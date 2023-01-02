@@ -1,0 +1,2 @@
+# mknowledgedb
+Personal knowledge db

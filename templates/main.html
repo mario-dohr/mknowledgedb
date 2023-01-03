@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-{%  for p in pages %}
-    <p>{{ p.title }}</p>
-{% endfor %}
-</body>
-</html>
+{%  extends "layout.html" %}
+{% block body %}
+    <div><input type="text" size="100" name="search"></div>
+    <div>
+    {%  for p in pages %}
+        <p>{{ p.title }}</p>
+    {% endfor %}
+    </div>
+{% endblock %}

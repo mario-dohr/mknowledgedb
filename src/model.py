@@ -1,10 +1,13 @@
-from mongoengine import Document
-from mongoengine import StringField, ListField
+import sqlalchemy as sa
+from app import db
 
 
-class Page(Document):
-    meta = {'collection': 'pages'}
-    title = StringField()
-    date = StringField()
-    content = StringField()
-    tags = ListField(StringField())
+class Page(db.Model):
+    id = sa.Column(sa.Integer, primary_key=True)
+    title_id = sa.Column(sa.String)
+    title = sa.Column(sa.String)
+    date = sa.Column(sa.String)
+    content = sa.Column(sa.String)
+    tags = sa.Column(sa.String)
+
+

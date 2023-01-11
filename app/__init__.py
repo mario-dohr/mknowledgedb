@@ -1,11 +1,10 @@
-from flask import Flask, render_template, request, redirect, url_for
-from flask_sqlalchemy import SQLAlchemy
-
-db = SQLAlchemy()
+from flask import Flask
+from model import db
 
 
 def create_app():
     app = Flask(__name__, template_folder='../templates', instance_relative_config=True)
+    app.logger.info('create_app')
     app.config.from_mapping(
         SECRET_KEY='dev'
     )
@@ -13,8 +12,9 @@ def create_app():
 
     db.init_app(app)
 
-    from main import main as main_bp
-    app.register_blueprint(main_bp)
+    #from main import main as main_bp
+    import main
+    app.register_blueprint(main.main)
 
     return app
 

@@ -1,5 +1,7 @@
 import sqlalchemy as sa
-from app import db
+from flask_sqlalchemy import SQLAlchemy
+
+db = SQLAlchemy()
 
 
 class Page(db.Model):

@@ -3,8 +3,7 @@ import markdown
 from markdown.extensions.wikilinks import WikiLinkExtension
 from markupsafe import Markup
 from . import main
-from .. import db
-from model import Page
+from model import Page, db
 
 
 @main.route('/')

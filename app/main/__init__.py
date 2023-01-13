@@ -1,6 +1,6 @@
 from flask import Blueprint
 
-main = Blueprint('main', __name__, template_folder='../../templates')
+main_bp = Blueprint('main_bp', __name__, template_folder='../../templates')
 
 from . import views
 

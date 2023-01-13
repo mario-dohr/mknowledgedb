@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block body %}
-    <form action="{{ url_for('edit_page') }}" method="post">
+    <form action="{{ url_for('.edit_page') }}" method="post">
     <input type="hidden" name="id" value="{{ page.id }}">
         <div>
             <label for="title">Title: </label>

@@ -12,9 +12,9 @@ def create_app():
 
     db.init_app(app)
 
-    #from main import main as main_bp
+    from main import main_bp
     import main
-    app.register_blueprint(main.main)
+    app.register_blueprint(main_bp)
 
     return app
 

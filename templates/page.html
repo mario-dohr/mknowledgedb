@@ -4,5 +4,5 @@
         {{ page.content }}
     </div>
     <div>{{ page.tags }}</div>
-    <div><a href="{{ url_for('edit_page',page_id=page.id) }}">Edit</a> </div>
+    <div><a href="{{ url_for('.edit_page',page_id=page.id) }}">Edit</a> </div>
 {% endblock %}
